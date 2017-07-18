@@ -12,9 +12,13 @@
 		6B5BCB921F1DC96400506095 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5BCB901F1DC96400506095 /* Main.storyboard */; };
 		6B5BCB941F1DC96400506095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B5BCB931F1DC96400506095 /* Assets.xcassets */; };
 		6B5BCB971F1DC96400506095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B5BCB951F1DC96400506095 /* LaunchScreen.storyboard */; };
+		E9FBB92D65344C14A29B75EC /* Pods_TandCandP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B94CD37E312EA59178319F1 /* Pods_TandCandP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05A04DD5F3BAAA751B6FC812 /* Pods-TandCandP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TandCandP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TandCandP/Pods-TandCandP.debug.xcconfig"; sourceTree = "<group>"; };
+		090D3DD4D4970DA91692EF3F /* Pods-TandCandP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TandCandP.release.xcconfig"; path = "Pods/Target Support Files/Pods-TandCandP/Pods-TandCandP.release.xcconfig"; sourceTree = "<group>"; };
+		0B94CD37E312EA59178319F1 /* Pods_TandCandP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TandCandP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5BCB891F1DC96400506095 /* TandCandP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TandCandP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B5BCB8C1F1DC96400506095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B5BCB8E1F1DC96400506095 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FBB92D65344C14A29B75EC /* Pods_TandCandP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14FBCB5AAE23DB2256AF7E5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05A04DD5F3BAAA751B6FC812 /* Pods-TandCandP.debug.xcconfig */,
+				090D3DD4D4970DA91692EF3F /* Pods-TandCandP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6B5BCB801F1DC96300506095 = {
 			isa = PBXGroup;
 			children = (
 				6B5BCB8B1F1DC96400506095 /* TandCandP */,
 				6B5BCB8A1F1DC96400506095 /* Products */,
+				14FBCB5AAE23DB2256AF7E5A /* Pods */,
+				BEE7B24F1BACF8EE0F2D84F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = TandCandP;
 			sourceTree = "<group>";
 		};
+		BEE7B24F1BACF8EE0F2D84F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B94CD37E312EA59178319F1 /* Pods_TandCandP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B5BCB9B1F1DC96400506095 /* Build configuration list for PBXNativeTarget "TandCandP" */;
 			buildPhases = (
+				4256F185EA5C6CD1DAFA7474 /* [CP] Check Pods Manifest.lock */,
 				6B5BCB851F1DC96300506095 /* Sources */,
 				6B5BCB861F1DC96300506095 /* Frameworks */,
 				6B5BCB871F1DC96300506095 /* Resources */,
+				2E7FF97CDEB56B536FB66A4C /* [CP] Embed Pods Frameworks */,
+				C9872C8E07A41398882423FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E7FF97CDEB56B536FB66A4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TandCandP/Pods-TandCandP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4256F185EA5C6CD1DAFA7474 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C9872C8E07A41398882423FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TandCandP/Pods-TandCandP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B5BCB851F1DC96300506095 /* Sources */ = {
@@ -256,6 +331,7 @@
 		};
 		6B5BCB9C1F1DC96400506095 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A04DD5F3BAAA751B6FC812 /* Pods-TandCandP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TandCandP/Info.plist;
@@ -268,6 +344,7 @@
 		};
 		6B5BCB9D1F1DC96400506095 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 090D3DD4D4970DA91692EF3F /* Pods-TandCandP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TandCandP/Info.plist;
