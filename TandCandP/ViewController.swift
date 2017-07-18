@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import TTTAttributedLabel
 
 class ViewController: UIViewController {
+  @IBOutlet weak var tcpLabel: TTTAttributedLabel! {
+    didSet {
+      tcpLabel.delegate = self
+    }
+  }
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    let message: NSString = "You agree to the Terms of Service, Privacy Policy and certify you are above 18 years of age."
+    tcpLabel.text = message as String
+    let tcRange: NSRange = message.range(of: "Terms of Service")
+    let pRange: NSRange = message.range(of: "Privacy Policy")
+    tcpLabel.addLink(to: URL(string: "https://www.google.com.vn")!, with: tcRange)
+    tcpLabel.addLink(to: URL(string: "http://tuoitre.vn/")!, with: pRange)
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-
+  
 }
 
+extension ViewController: TTTAttributedLabelDelegate {
+  func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+  }
+}
