@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     tcpLabel.text = message as String
     
     let linkAttributes = [
-      NSForegroundColorAttributeName: UIColor.yellow,
+      NSForegroundColorAttributeName: UIColor.red,
       NSUnderlineStyleAttributeName: NSNumber(value:false),
       ]
     let activeLinkAttributes = [
