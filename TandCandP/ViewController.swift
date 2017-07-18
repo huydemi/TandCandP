@@ -21,6 +21,18 @@ class ViewController: UIViewController {
     
     let message: NSString = "You agree to the Terms of Service, Privacy Policy and certify you are above 18 years of age."
     tcpLabel.text = message as String
+    
+    let linkAttributes = [
+      NSForegroundColorAttributeName: UIColor.yellow,
+      NSUnderlineStyleAttributeName: NSNumber(value:false),
+      ]
+    let activeLinkAttributes = [
+      NSForegroundColorAttributeName: UIColor.green,
+      NSUnderlineStyleAttributeName: NSNumber(value:false),
+      ]
+    tcpLabel.linkAttributes = linkAttributes
+    tcpLabel.activeLinkAttributes = activeLinkAttributes
+    
     let tcRange: NSRange = message.range(of: "Terms of Service")
     let pRange: NSRange = message.range(of: "Privacy Policy")
     tcpLabel.addLink(to: URL(string: "https://www.google.com.vn")!, with: tcRange)
